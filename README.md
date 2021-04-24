@@ -21,3 +21,8 @@
 
 ## Author
 [Vilija](https://github.com/vikontrimaite)
+
+## Needs to be done:
+[] working 'add new grade'
+[] edit a grade (if it's needed at all)
+[] add validation when tyring to delete a grade
