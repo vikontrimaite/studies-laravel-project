@@ -23,6 +23,6 @@
 [Vilija](https://github.com/vikontrimaite)
 
 ## Needs to be done:
-[] working 'add new grade'
-[] edit a grade (if it's needed at all)
-[] add validation when tyring to delete a grade
+[-] working 'add new grade' (error: ``The name field is required.``)
+[-] edit a grade page (error: not showing lectures tab)
+[-] add validation when tyring to delete a grade
