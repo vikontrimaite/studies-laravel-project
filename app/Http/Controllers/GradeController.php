@@ -51,7 +51,7 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'grade' => 'required|gte:1|max:10'
+            'grade' => 'required'
         ]);
 
         $grade = new Grade();
@@ -96,7 +96,7 @@ class GradeController extends Controller
     public function update(Request $request, Grade $grade)
     {
         $this->validate($request, [
-            'grade' => 'required|required|gte:1|max:10'
+            'grade' => 'required'
         ]);
 
         $grade->fill($request->all());

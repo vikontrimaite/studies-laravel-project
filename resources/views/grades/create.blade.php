@@ -16,32 +16,32 @@
                         <div class="form-group">
                             <label>Pasirinktas studentas</label>
                             <select name="student_id" id="" class="form-control">
-                                 <option value="" selected disabled>Pasirinkite studentą</option>
-                                 @foreach ($students as $student)
-                                 <option value="{{ $student->id }}">{{ $student->name }} {{ $student->surname }} </option>
-                                 @endforeach
+                                <option value="" selected disabled>Pasirinkite studentą</option>
+                                @foreach ($students as $student)
+                                <option value="{{ $student->id }}">{{ $student->name }} {{ $student->surname }}
+                                </option>
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Paskaitos pavadinimas</label>
                             <select name="lecture_id" id="" class="form-control">
-                                 <option value="" selected disabled>Pasirinkite paskaitą</option>
-                                 @foreach ($lectures as $lecture)
-                                 <option value="{{ $lecture->id }}">{{ $lecture->name }}</option>
-                                 @endforeach
+                                <option value="" selected disabled>Pasirinkite paskaitą</option>
+                                @foreach ($lectures as $lecture)
+                                <option value="{{ $lecture->id }}">{{ $lecture->name }}</option>
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Pažymys</label>
-                            <input type="number" name="grade" class="form-control" value="{{ old('grade') }}">
-
-                            @error('grade')
-                            <div class="alert alert-danger">
-                                {{ $message }}
-                            </div>
-                            @enderror
+                            <select name="grade" id="" class="form-control">
+                                <option value="" selected disabled>Pasirinkite pažymį</option>
+                                <?php for ($i = 1; $i <= 10; $i++) : ?>
+                                <option value=""><?php echo $i ?></option>
+                                <?php endfor; ?>
+                            </select>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Įvesti</button>
