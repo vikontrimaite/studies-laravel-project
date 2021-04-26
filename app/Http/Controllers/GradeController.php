@@ -37,7 +37,7 @@ class GradeController extends Controller
      */
     public function create()
     {
-        $students=\App\Models\Student::orderBy('name')->get();
+        $students=\App\Models\Student::orderBy('surname')->get();
         $lectures=\App\Models\Lecture::orderBy('name')->get();
         return view('grades.create', ['students'=> $students], ['lectures'=> $lectures]);
     }

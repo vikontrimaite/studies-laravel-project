@@ -13,7 +13,9 @@
                             <label>Pasirinktas studentas</label>
                             <select name="student_id" id="" class="form-control">
                                 @foreach ($students as $student)
-                                <option value="{{ $student->id }}" @if($student->id == $grade->student_id) selected="selected" @endif>{{ $student->name }} {{ $student->surname }}</option>
+                                @if($student->id == $grade->student_id)
+                                <option value="{{ $student->id }}">{{ $student->name }} {{ $student->surname }}</option>
+                                @endif
                                 @endforeach
                             </select>
                         </div>
@@ -22,14 +24,16 @@
                             <label>Paskaitos pavadinimas</label>
                             <select name="lecture_id" id="" class="form-control">
                                 @foreach ($lectures as $lecture)
-                                <option value="{{ $lecture->id }}" @if($lecture->id == $grade->lecture_id) selected="selected" @endif>{{ $lecture->name }}</option>
+                                @if($lecture->id == $grade->lecture_id)
+                                <option value="{{ $lecture->id }}">{{ $lecture->name }}</option>
+                                @endif
                                 @endforeach
                             </select>
                         </div> --}}
-                    
+
                         <div class="form-group">
                             <label for="">Pažymys</label>
-                            <input type="number" name="bet" class="form-control" value="{{ $grade->grade }}">
+                            <input type="number" name="grade" class="form-control" value="{{ $grade->grade }}">
 
                             @error('grade')
                             <div class="alert alert-danger">
